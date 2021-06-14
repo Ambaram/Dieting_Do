@@ -1,0 +1,50 @@
+﻿@model Dieting_Do.Models.Animal
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Animal</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Breed.AnimalBreed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Breed.AnimalBreed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalWeight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalWeight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalHeight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalHeight)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AminalID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

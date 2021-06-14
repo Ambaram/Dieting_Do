@@ -1,0 +1,56 @@
+﻿@model Dieting_Do.Models.Animal
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Animal</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Breed.AnimalBreed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Breed.AnimalBreed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalWeight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalWeight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalHeight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalHeight)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
